@@ -2,26 +2,27 @@ import fetch from 'node-fetch'
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 let pp = await conn.profilePictureUrl(m.chat).catch(_ => null)
 
-let str = `*https://www.youtube.com/channel/UCMx4e8anOq_Olt2nMSv0Cow*
+let str = `JOIN GRUB OFFICIAL BOT BY DHYKK
+[ FITUR BOT GEGE + ADA PROMO SETIAP MINGGU ]
 
-BUY SC INI? CHAT AJA MAS / KAK😌✌️
-wa.me/62895625017272
-HARGA? 5K FULL SCRAPE / 10K PREMIUM SC + FITUR TAMBAHAN 400`
+LINK GC BOT¹ : https://chat.whatsapp.com/Daqh39CFd1I0WmuOqg73Ar
+
+[IKUTIN PERATURAN YA BANH]`
 let wibu = `https://api-reysekha.herokuapp.com/api/random/cosplay?apikey=apirey` 
 let thumb = await(await fetch(wibu)).buffer()
-conn.sendButtonDoc(m.chat, str, wm,'Thankyou','.huuu', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: "https://Instagram.com/dhykkkz",
+conn.sendButtonDoc(m.chat, str, wm,'Makasih ✅️','.huuu', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+    mediaUrl: "https://chat.whatsapp.com/Daqh39CFd1I0WmuOqg73Ar",
     mediaType: "VIDEO",
     description: "https://www.instagram.com/p/CevoCg5hG-p/?utm_source=ig_web_copy_link", 
-    title: 'INFO SC KAK? CHAT AJ💓🌿',
+    title: 'GRUB BOT OFFICIAL AYNA💓🌿',
     body: wm,
     thumbnail: thumb,
     sourceUrl: sgc
   }
   } }) 
           }
-handler.help = ['source code']
+handler.help = ['gcbot']
 handler.tags = ['info']
-handler.command =  /^(script|sc)$/i
+handler.command =  /^(gcbot)$/i
 
 export default handler

@@ -1,5 +1,5 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
-let text = `
+let info = `
 ┌─「 Donasi • Pulsa 」
 │ • *Telkomsel:* [${global.ppulsa}]
 ❏────

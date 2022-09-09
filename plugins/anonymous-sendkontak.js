@@ -1,6 +1,7 @@
-let { MessageType, Presence } = (await import('@adiwajshing/baileys')).default
+let { MessageType, Presence } = require('@adiwajshing/baileys')
 
 async function handler(m, { command, conn, text }) {
+	await conn.updatePresence(m.chat, Presence.composing)
 	this.anonymous = this.anonymous ? this.anonymous : {}
 	let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 	let room = Object.values(this.anonymous).find(room => room.check(who))
@@ -10,15 +11,12 @@ async function handler(m, { command, conn, text }) {
   if (text) name = text
   else name = conn.getName(m.sender)
 	var number = who.split('@')[0]
-	let tks = `➔ Nomor: ${m.sender.split`@`[0]}
-➔ Nama: ${name}`
-    this.reply(m.chat, 'Menggirimkan Kontak...')
-	if (other) this.reply(other, `Partner mengirimkan kontak kepadamu`)
-	if (other) this.sendHydrated(other, `${htki} ᴀɴᴏɴʏᴍᴏᴜs ᴄʜᴀᴛs ${htka}`, tks, await conn.profilePictureUrl(m.sender, 'image').catch(_ => './src/avatar_contact.png'), `wa.me/${m.sender.split`@`[0]}`, 'ᴛᴜʀɴ ᴄʜᴀᴛ ᴘᴀʀᴛɴᴇʀ', null,null, [['ʟᴇᴀᴠᴇ', '.leave'],[null,null],[null,null]], 0,  { mentionedJid: [m.sender]})
+	if (other) this.sendMessage(other, `Partner mengirimkan kontak kepadamu`, MessageType.text)
+	if (other) this.sendContact(other, number, name, m)
 }
 handler.help = ['sendkontak']
-handler.tags = 'anonymous'
+handler.tags = ['anonymous']
 handler.command = /^(sendkontak)$/i
 handler.private = true
-
+handler.fail = null
 export default handler
