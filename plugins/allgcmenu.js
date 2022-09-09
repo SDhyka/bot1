@@ -75,9 +75,9 @@ const listMessage = {
   }
 }
 
-handler.help = ['soundmenu']
-handler.tags = ['fun']
-handler.command = /^(soundmenu)/i
+handler.help = ['gcmenu']
+handler.tags = ['main']
+handler.command = /^(allgc|gcall|gcmenu|menugc|allmenugc)/i
 
 
 export default handler
