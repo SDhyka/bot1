@@ -4,18 +4,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   let type = (args[0] || '').toLowerCase()
   let _type = (args[0] || '').toLowerCase()
 
-//------- NOMOR
-  let nowner = `${nomorown.split`@`[0]}@s.whatsapp.net`
-  let teksnomor = `${htki} *OWNER* ${htka}
-✦ @${nomorown.split`@`[0]} ✦
-------- ${nameown} -------
-
-📮 *Note:*
-• Owner tidak menerima save contact
-• Owner berhak blockir tanpa alasan
-• Berbicaralah yang sopan & tidak spam
-• Owner Hanya merespon yang berkaitan dengan BOT
-• No Telp`
+//------- Nomor
 
   let teks = 'Pilih dibawah kak ! o(〃＾▽＾〃)o'
 const sections = [
@@ -43,13 +32,13 @@ const sections = [
 const listMessage = {
   text: teks,
   footer: null,
-  title: `${htki} *SOUND MENU* ${htka}`,
-  buttonText: "Click Here !",
+  title: `${htki} *GC JB/ANIME SERU* ${htka}`,
+  buttonText: "Silahkan Pilih !",
   sections
 }
 
   try {
-    if (/(soundmenu)/i.test(command)) {
+    if (/(gcmenu)/i.test(command)) {
       const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
         switch (type) {
           case 'nomor':
