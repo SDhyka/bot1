@@ -225,7 +225,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
     },{
 	title: `${htki} SUPPORT ${htka}`,
 	rows: [
-	    {title: `💸 ${pmenus} JOIN MURID BOT`, rowId: ".gcmenu", description: "Pengen Punya Bot Sendiri Yang Ngehasilin Duit?"},
 	    {title: `🧃 ${pmenus} GRUB SERU`, rowId: ".gcmenu", description: "Menampilkan semua grub jb / anime yang seru"},
 	    {title: `🔖 ${pmenus} SEWA`, rowId: ".sewa", description: "Menampilkan list harga sewa BOT"},
 	    {title: `🌟 ${pmenus} BUY PREMIUM`, rowId: ".premium", description: "Menampilkan list harga premium"},
