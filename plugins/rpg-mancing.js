@@ -1,4 +1,4 @@
-let { MessageType } = require('@adiwajshing/baileys')
+let { MessageType } = (await import('@adiwajshing/baileys')).default
 
 let wm = global.wm
 let handler = async (m, { conn, usedPrefix, owner }) => { 
@@ -9,7 +9,7 @@ let handler = async (m, { conn, usedPrefix, owner }) => {
         let you = conn.getName(m.sender)
         let user = global.db.data.users[m.sender]
         
-        if (global.db.data.users[m.sender].pancing > 0 ) {
+        if (global.db.data.users[m.sender].fishingrod > 0 ) {
         if (new Date - global.db.data.users[m.sender].lastfishing > 240000) {
         	
         
@@ -24,10 +24,9 @@ let handler = async (m, { conn, usedPrefix, owner }) => {
             let psepick = (_psepick * 1)
             let _psenjata = `${pickRandom(['1', '0', '0', '0'])}`
            let psenjata = (_psenjata * 1)
-        
-        let gggd = 'https://telegra.ph/file/4a2dad6f0f6dfef650bf3.jpg'   
+           
         let mcng = `
-*Your 🎣Fishing Results!*
+*📮Hasil tangkapan Mu*
         
 🐟Ikan nila : ${nila}
 🐡Bawal : ${bawal}
@@ -44,14 +43,14 @@ you can cook it to increase stamina or blood💉
 _example:_
 ${ usedPrefix }Cook catfish `    
         setTimeout(() => {                 
-        conn.sendButtonImg(m.chat, gggd, mcng, wm2, 'Inventory', '.inv', m)
+        conn.reply( m.chat, mcng, m)
          if (psepick > 0 ) {
          	global.db.data.users[m.sender].psepick += psepick * 1
-         conn.sendBut(m.chat, `You Get 🎁chest weapons epic ${psepick} item`, wm2, 'again', '.mancing', m)
+         conn.sendButton( m.chat, `You Get 🎁chest weapons epic ${psepick} item`, `Sad-Bot`, [[`again`, `.mancing`]], m)
          } 
         if  (psenjata > 0 ) {
         	global.db.data.users[m.sender].psenjata+= psenjata * 1
-        conn.sendButton( m.chat, `You Get 🎁chest weapons ${psenjata} item`, `games wa bot`, `Again`, `.mancing`, m)
+        conn.sendButton( m.chat, `You Get 🎁chest weapons ${psenjata} item`, `Sad-Bot`, [[`Again`, `.mancing`]], m)
         	}
         }, 38000)
 
@@ -78,7 +77,7 @@ ${ usedPrefix }Cook catfish `
          user.kepiting += kepiting * 1
 
         	  } else m.reply(`You're already fishing, wait until ${timers}`)
-           } else conn.sendBut(m.chat, `*[❗] kamu tidak punya kail pancingan 🎣*`, wm, `Craft Fishingrod`, '.craft pancing', m)
+           } else conn.sendButton(m.chat, `*[❗] kamu tidak punya kail pancingan 🎣*`, wm, [[`Craft Fishingrod`, '.craft pancing']], m)
            } catch (e) {
         console.log(e)
         conn.reply(m.chat, 'Error', m)
@@ -94,8 +93,8 @@ ${ usedPrefix }Cook catfish `
 handler.tags = ['rpg']
 handler.command = /^(mancing|memancing|fish)$/i 
 
-export default handler
-//JANGAN DIUBAH YA YG DIBAWAH
+export default handler 
+//JANGAN DIUBAH!
 function pickRandom(list) {
     return list[Math.floor(Math.random() * list.length)]
 }

@@ -1,4 +1,4 @@
-let { MessageType } = require('@adiwajshing/baileys')
+let { MessageType } = (await import('@adiwajshing/baileys')).default
 let handler = async (m, { conn, text, command, args, usedPrefix, DevMode }) => { 
     conn.slots = conn.slots ? conn.slots : {}
     if (m.chat in conn.slots) return m.reply('Masih ada Yang Melakukan Slots Disini, Tunggu Sampai selesai!!')
@@ -64,16 +64,14 @@ ${pickRandom(['🍊', '🍇', '🍉', '🍌', '🍍'])}|${pickRandom(['🍊', '�
         } 
         conn.sendBut(m.chat, `
        *🎰VIRTUAL SLOTS🎰*
-
 ${spins1}|${spins2}|${spins3}
 ${spins4}|${spins5}|${spins6} <<==
 ${spins7}|${spins8}|${spins9}
-
 *${WinOrLose}* *${Hadiah}*
 `, wm, 'Main Lagi', '.slot ${text}', m)
     } catch (e) {
         console.log(e)
-        conn.reply(m.chat, 'Error', m)
+        conn.reply(m.chat, 'Dalam pengembangan', m)
         if (DevMode) {
             for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
                 conn.sendMessage(jid, 'Menu.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + e + '*', MessageType.text)
@@ -84,7 +82,7 @@ ${spins7}|${spins8}|${spins9}
     }
 }
 handler.help = ['slot', 'jackpot']
-handler.tags = ['rpg', 'game']
+handler.tags = ['rpg']
 handler.command = /^slot?|jac?kpot$/i
 
 export default handler
