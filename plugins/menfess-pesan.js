@@ -28,7 +28,7 @@ Kamu bisa menggunakan Bot ini
 Contoh Penggunaan: .menfess nomor|pesan untuknya
 Contoh: .menfess 628xxxxxxxxxx|hai owner`
 
-   conn.sendButton(korban + '@s.whatsapp.net', spam1, [['TANYA SIAPA?',`.Menfess ${nomor.split("@s.whatsapp.net")[0]}|Hmm Ini Siapa?`]], m)
+    conn.reply(korban + '@s.whatsapp.net', spam1, m)
 
     let logs = `Sukses Mengirim Pesan
 👥 Dari : wa.me/${nomor.split("@s.whatsapp.net")[0]}
@@ -39,7 +39,7 @@ Contoh: .menfess 628xxxxxxxxxx|hai owner`
     conn.reply(m.chat, logs, m)
 }
 handler.help = ['menfess nomor|pesan']
-handler.tags = ['nocategory','main']
+handler.tags = ['nocategory']
 
 handler.command = /^(menfess|confess|menfes|confes)$/i
 
