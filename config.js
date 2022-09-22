@@ -46,8 +46,8 @@ global.ppulsa2 = '081384200380' // kalau ada kartu lain isi aja
 global.psaweria = 'https://saweria.com/HyDhyka'
 
 /*============== NOMOR ==============*/
-global.nomorbot = '6283875507713'
-global.nomorown = '62895625017272'
+global.nomorbot = '6289521311007'
+global.nomorown = '6281268233206'
 global.namebot = 'Aynaa - Bot MD'
 global.nameown = 'Dykkz Own'
 
@@ -59,7 +59,7 @@ global.lolkey = '8e66d0934cf741bfd2182c16' // PUNYA WAHID 357d3c85079c4e0818731e
 /*============== STAFF ==============*/
 global.owner = [
   ['6281384200380', 'Dhykz (Own 1 Real)', true],
-  ['62895625017272', 'Dykkz Store (Own 2 Real)', true],
+  ['62', 'Dykkz Store (Own 2 Real)', true],
   ['62895625017272', 'Kalo Mau Beli Chat', true] //Ganti jd nomormu sama Namamu
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
@@ -108,7 +108,7 @@ global.APIKeys = { // APIKey Here
 // Kata APIKEY itu isi dengan apikey lu sendiri, dengan beli ke website itu
 
 /*============== WATERMARK ==============*/
-global.wm = '             「 Ayna Bot 」' //Main Watermark
+global.wm = '                「 XOrcisyGans-BOT 」' //Main Watermark
 global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Aynaa Punyaa ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
 global.wm3 = '⫹⫺ Aynaa-BOT MD '
 global.botdate = `⫹⫺ DATE: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
