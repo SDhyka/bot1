@@ -8,7 +8,7 @@ let [number, pesan] = text.split `|`
     let user = global.db.data.users[m.sender]
 
     let korban1 = `${number}`
-    var nomor1 = m.sender
+    var nomor = m.sender
     let spam2 = `𝑷𝒊𝒏𝒈ᬊ𝑷𝒐𝒏𝒈 💓
 ᴀᴅᴀ ᴘᴇsᴀɴ ʀᴀʜᴀsɪᴀ ɴɪʜ ʙᴜᴀᴛ ᴋᴀᴍᴜ - ☏
 ➥ ${pesan}
@@ -16,7 +16,7 @@ let [number, pesan] = text.split `|`
 ꗃMᴀᴜ Kɪʀɪᴍ Pᴇsᴀɴ Kᴀʏᴀᴋ Gɪɴɪ Jᴜɢᴀ? Bɪsᴀ Pᴀᴋᴇ Bᴏᴛ Iɴɪ
 .ᴍᴇɴғᴇss2 62××××××××|Isɪ ᴘᴇsᴀɴ ᴋᴀᴍᴜ🧃`
 
-    conn.reply(korban + '@s.whatsapp.net', spam1, m)
+    conn.reply(korban1 + '@s.whatsapp.net', spam2, m)
 
     let logs = `Sukses Mengirim Pesan Type 2
 👥 Dari : wa.me/${nomor.split("@s.whatsapp.net")[0]}
