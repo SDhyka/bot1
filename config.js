@@ -59,7 +59,7 @@ global.lolkey = '8e66d0934cf741bfd2182c16' // PUNYA WAHID 357d3c85079c4e0818731e
 /*============== STAFF ==============*/
 global.owner = [
   ['6281384200380', 'Dhykz (Own 1 Real)', true],
-  ['62', 'Dykkz Store (Own 2 Real)', true],
+  ['6281268233206', 'Dykkz Store (Own 2 Real)', true],
   ['62895625017272', 'Kalo Mau Beli Chat', true] //Ganti jd nomormu sama Namamu
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
@@ -108,13 +108,13 @@ global.APIKeys = { // APIKey Here
 // Kata APIKEY itu isi dengan apikey lu sendiri, dengan beli ke website itu
 
 /*============== WATERMARK ==============*/
-global.wm = '                「 XOrcisyGans-BOT 」' //Main Watermark
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Aynaa Punyaa ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ Aynaa-BOT MD '
+global.wm = '                「 Cherry-Bot 」' //Main Watermark
+global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘Cherry Punyaa ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
+global.wm3 = '⫹⫺ Cherry-BOT MD '
 global.botdate = `⫹⫺ DATE: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
 global.bottime = `T I M E : ${wktuwib}`
-global.titlebot = `⫹⫺ WhatsApp Bot | By XORCISTGANS`
-global.author = '                「 AYNA BOT - あ」'
+global.titlebot = `⫹⫺ WhatsApp Bot | By Cherry`
+global.author = '                「 CHERRY BOT - あ」'
 
 
 /*============== LOGO ==============*/
@@ -188,8 +188,8 @@ global.htjava = '⫹⫺'    //hiasan Doang :v
 global.hsquere = ['⛶','❏','⫹⫺']
 
 /*============== STICKER WM ==============*/
-global.stickpack = 'Aynna Bott - XD'
-global.stickauth = `By © Aynaa Bawnh`
+global.stickpack = 'Cherry Bott - XD'
+global.stickauth = `By © Cherry Bawnh`
 
 global.multiplier = 119 // The higher, The harder levelup
 
